@@ -1,0 +1,28 @@
+{
+  "quickLinks": [
+    { "label": "Research", "url": "#research", "primary": true },
+    { "label": "Projects", "url": "#projects" },
+    { "label": "Publications", "url": "#publications" },
+    { "label": "CV", "url": "docs/Josh-Hatfield-CV.pdf" }
+  ],
+  "news": [
+    { "date": "2026", "text": "Preparing MS thesis defense on VR industrial maintenance training." },
+    { "date": "2026", "text": "Papers accepted for IEEE ROSE 2026." },
+    { "date": "2026", "text": "Incoming PhD student in Computer Science / HCI at Colorado School of Mines." }
+  ],
+  "research": [
+    { "title": "VR Industrial Training", "meta": "Thesis Research", "text": "Immersive maintenance tasks, performance telemetry, safety violations, hesitation events, and adaptive HUD feedback." },
+    { "title": "Human-Centered AI", "meta": "HCI + AI", "text": "AI-assisted feedback generation, explanation, and state-aware support for learning environments." },
+    { "title": "Narrative Reflection Systems", "meta": "Emerging Direction", "text": "D&D-inspired and spiritually informed reflection systems for meaning-making and care contexts." }
+  ],
+  "projects": [
+    { "title": "VR Hydroelectric Maintenance Trainer", "meta": "Unreal Engine / VR", "text": "A VR system for procedural industrial maintenance training with task-state tracking and feedback.", "url": "https://github.com/sirjoshies" },
+    { "title": "Source-of-Truth Analysis Pipeline", "meta": "Python / Statistics", "text": "Reusable analysis workflow for participant-level KPIs, event logs, survey scoring, and figures.", "url": "https://github.com/sirjoshies" },
+    { "title": "Community Resilience ABM", "meta": "Agent-Based Modeling", "text": "Simulation framework for prolonged disruption, social connectivity, migration, and policy allocation.", "url": "https://github.com/sirjoshies" }
+  ],
+  "publications": [
+    { "title": "Adaptive Feedback in VR Industrial Training Environments", "venue": "IEEE ROSE 2026", "note": "Conference paper / presentation" },
+    { "title": "Scenario-Driven VR Workforce Training with Finite-State Event Tracking", "venue": "IEEE ROSE 2026", "note": "Conference paper / presentation" },
+    { "title": "State-Aware Adaptive Feedback and Performance Telemetry in VR Industrial Maintenance Training", "venue": "MS Thesis, Marshall University", "note": "Thesis manuscript" }
+  ]
+}

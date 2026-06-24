@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Josh Hatfield | Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio, CV, and project archive for Josh Hatfield." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark">JH</span>
+        <span class="brand-text">Josh Hatfield</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#bio">Bio</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
+        <a href="#gallery">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <aside class="profile-card reveal">
+          <div class="portrait-wrap">
+            <img class="portrait-img" src="assets/profile.jpg" alt="Professional portrait of Josh Hatfield" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="portrait-placeholder" aria-label="Profile image placeholder">JH</div>
+          </div>
+          <h1>Josh Hatfield</h1>
+          <p class="tagline">Human-centered computing, immersive training, adaptive feedback, and AI-supported decision systems.</p>
+          <dl class="contact-list">
+            <div><dt>Status</dt><dd>MS Computer Science / Incoming PhD Student</dd></div>
+            <div><dt>Institution</dt><dd>Marshall University → Colorado School of Mines</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:sirjoshies@gmail.com">sirjoshies@gmail.com</a></dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/sirjoshies">@sirjoshies</a></dd></div>
+          </dl>
+          <div class="button-row">
+            <a class="button primary" href="docs/Josh-Hatfield-CV.pdf">Download CV</a>
+            <a class="button ghost" href="https://github.com/sirjoshies">GitHub</a>
+          </div>
+          <p class="photo-note">To add your photo, upload a professional headshot as <code>assets/profile.jpg</code>.</p>
+        </aside>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Academic Portfolio</p>
+          <h2>Building VR, HCI, and AI systems that help people learn, reflect, and make better decisions.</h2>
+          <p>
+            This site is a professional front door for research, software projects, publications, teaching work, and selected technical artifacts.
+            It is built as a GitHub Pages-ready static site with dynamic content loaded from a JSON file.
+          </p>
+          <div class="quick-links" id="quick-links"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio" class="section">
+      <div class="container two-column reveal">
+        <div>
+          <p class="eyebrow">Bio</p>
+          <h2>Brief Bio</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I am a computer science researcher interested in human-computer interaction, immersive learning environments,
+            adaptive feedback, and AI-supported training systems. My current work explores how VR and intelligent feedback
+            can support procedural learning in safety-critical industrial maintenance settings.
+          </p>
+          <p>
+            My broader interests include HCI, VR/AR, human-centered AI, spiritual care technologies, narrative systems,
+            and computational models for community resilience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section alt">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">News</p>
+          <h2>Updates &amp; Highlights</h2>
+        </div>
+        <div id="news-list" class="stacked-list"></div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2>Research Directions</h2>
+          <p>Use this section to present research themes, lab collaborations, thesis work, and open problems.</p>
+        </div>
+        <div id="research-grid" class="card-grid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected Projects</h2>
+          <p>Each project can link to a dedicated GitHub repository, demo, paper, poster, or thesis chapter.</p>
+        </div>
+        <div id="project-grid" class="card-grid"></div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Publications</p>
+          <h2>Papers, Posters &amp; Reports</h2>
+        </div>
+        <div id="publication-list" class="pub-list"></div>
+      </div>
+    </section>
+
+    <section id="teaching" class="section alt">
+      <div class="container two-column reveal">
+        <div>
+          <p class="eyebrow">Teaching</p>
+          <h2>Teaching &amp; Mentoring</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Add teaching assistantships, workshops, tutorials, guest lectures, MUTA activities, outreach events,
+            and technical mentoring here. This section mirrors academic faculty pages while still fitting a graduate-student profile.
+          </p>
+          <ul>
+            <li>VR training and simulation demonstrations</li>
+            <li>Programming, data analysis, and cloud workflow support</li>
+            <li>Student organization leadership and technical workshops</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="section">
+      <div class="container two-column reveal">
+        <div>
+          <p class="eyebrow">Service</p>
+          <h2>Service &amp; Leadership</h2>
+        </div>
+        <div class="prose">
+          <p>
+            Use this area for student organization work, reviewing, conference volunteering, outreach, technical support,
+            and university/community service.
+          </p>
+          <ul>
+            <li>Marshall University Technology Association organizer</li>
+            <li>Research and presentation support for student projects</li>
+            <li>Technical infrastructure, dashboarding, and analytics workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section alt">
+      <div class="container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2>Images &amp; Media</h2>
+          <p>Drop screenshots, posters, VR environment images, conference photos, or visual abstracts into the assets folder and reference them here.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure><div class="gallery-placeholder">VR</div><figcaption>VR training environment</figcaption></figure>
+          <figure><div class="gallery-placeholder">HCI</div><figcaption>HCI research concepts</figcaption></figure>
+          <figure><div class="gallery-placeholder">AI</div><figcaption>Adaptive feedback pipeline</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Josh Hatfield. Built for GitHub Pages.</p>
+      <a href="#home">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
