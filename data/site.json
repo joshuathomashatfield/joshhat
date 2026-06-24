@@ -1,28 +1,242 @@
 {
   "quickLinks": [
-    { "label": "Research", "url": "#research", "primary": true },
-    { "label": "Projects", "url": "#projects" },
-    { "label": "Publications", "url": "#publications" },
-    { "label": "CV", "url": "docs/Josh-Hatfield-CV.pdf" }
+    {
+      "label": "Research",
+      "url": "#research",
+      "primary": true
+    },
+    {
+      "label": "Projects",
+      "url": "#projects"
+    },
+    {
+      "label": "Publications",
+      "url": "#publications"
+    },
+    {
+      "label": "CV",
+      "url": "docs/Josh-Hatfield-CV.pdf"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/joshuathomashatfield"
+    }
   ],
   "news": [
-    { "date": "2026", "text": "Preparing MS thesis defense on VR industrial maintenance training." },
-    { "date": "2026", "text": "Papers accepted for IEEE ROSE 2026." },
-    { "date": "2026", "text": "Incoming PhD student in Computer Science / HCI at Colorado School of Mines." }
+    {
+      "date": "Fall 2026",
+      "text": "Beginning a Ph.D. in Computer Science at Colorado School of Mines with a focus on HCI."
+    },
+    {
+      "date": "Aug 2026",
+      "text": "Completing the M.S. in Computer Science at Marshall University with thesis work on VR industrial maintenance training."
+    },
+    {
+      "date": "2026",
+      "text": "State-aware adaptive feedback work accepted at the IEEE Global Humanitarian Technology Conference (GHTC)."
+    },
+    {
+      "date": "2026",
+      "text": "Awarded the Creative Discovery and Research Award at Marshall University for cross-disciplinary research."
+    },
+    {
+      "date": "2025",
+      "text": "Presented two VR workforce training papers at IEEE ROSE."
+    }
   ],
   "research": [
-    { "title": "VR Industrial Training", "meta": "Thesis Research", "text": "Immersive maintenance tasks, performance telemetry, safety violations, hesitation events, and adaptive HUD feedback." },
-    { "title": "Human-Centered AI", "meta": "HCI + AI", "text": "AI-assisted feedback generation, explanation, and state-aware support for learning environments." },
-    { "title": "Narrative Reflection Systems", "meta": "Emerging Direction", "text": "D&D-inspired and spiritually informed reflection systems for meaning-making and care contexts." }
+    {
+      "title": "Human-Centered AI for Training",
+      "meta": "HCI + AI",
+      "text": "Designing adaptive simulation environments that improve training, safety, and decision-making in complex systems."
+    },
+    {
+      "title": "VR Industrial Maintenance",
+      "meta": "M.S. Thesis",
+      "text": "Studying state-aware feedback, procedural task tracking, hesitation events, safety violations, and telemetry in a VR hydroelectric maintenance environment."
+    },
+    {
+      "title": "Reinforcement Learning & Feedback",
+      "meta": "Adaptive Systems",
+      "text": "Exploring reinforcement-learning-inspired feedback loops and state hierarchies for procedural skill acquisition."
+    },
+    {
+      "title": "Immersive Analytics & XR",
+      "meta": "XR Simulation",
+      "text": "Building interfaces that combine immersive environments with interpretable performance data, visual evidence, and decision-support cues."
+    },
+    {
+      "title": "Embedded & Secure Systems",
+      "meta": "Hardware Security",
+      "text": "Prior work includes FPGA-based entropy generation, NIST validation, and reproducible embedded-security reporting."
+    },
+    {
+      "title": "Community Resilience Modeling",
+      "meta": "Agent-Based Modeling",
+      "text": "Modeling prolonged disruption, social connectivity, migration, and policy-driven allocation under public-health stressors."
+    }
   ],
   "projects": [
-    { "title": "VR Hydroelectric Maintenance Trainer", "meta": "Unreal Engine / VR", "text": "A VR system for procedural industrial maintenance training with task-state tracking and feedback.", "url": "https://github.com/sirjoshies" },
-    { "title": "Source-of-Truth Analysis Pipeline", "meta": "Python / Statistics", "text": "Reusable analysis workflow for participant-level KPIs, event logs, survey scoring, and figures.", "url": "https://github.com/sirjoshies" },
-    { "title": "Community Resilience ABM", "meta": "Agent-Based Modeling", "text": "Simulation framework for prolonged disruption, social connectivity, migration, and policy allocation.", "url": "https://github.com/sirjoshies" }
+    {
+      "title": "VR Hydroelectric Maintenance Trainer",
+      "meta": "Unreal Engine 5 / VR",
+      "text": "A VR system for safety-critical industrial maintenance training using task-state tracking, adaptive HUD feedback, and performance telemetry.",
+      "url": "#gallery"
+    },
+    {
+      "title": "State-Aware Analysis Pipeline",
+      "meta": "Python / Statistics",
+      "text": "A source-of-truth analysis workflow for participant-level KPIs, event logs, survey scoring, Welch tests, effect sizes, and thesis figures.",
+      "url": "#publications"
+    },
+    {
+      "title": "Community Resilience ABM",
+      "meta": "Agent-Based Modeling",
+      "text": "An agent-based framework integrating social connectivity, migration, and policy allocation for modeling prolonged disruption.",
+      "url": "#publications"
+    },
+    {
+      "title": "FPGA-Based True Random Number Generator",
+      "meta": "NSA Internship / Hardware Security",
+      "text": "An FPGA entropy-generation project evaluated with NIST randomness testing for cryptographic applications.",
+      "url": "#publications"
+    },
+    {
+      "title": "GameShelf Web Platform",
+      "meta": "React / Node.js / Azure SQL",
+      "text": "A cloud-based game catalog platform supporting user reviews, social connectivity, and database-backed web functionality.",
+      "url": "https://github.com/joshuathomashatfield"
+    },
+    {
+      "title": "Facial Recognition Attendance System",
+      "meta": "OpenCV / Python",
+      "text": "A real-time recognition and logging system designed for multi-camera attendance workflows.",
+      "url": "https://github.com/joshuathomashatfield"
+    }
   ],
   "publications": [
-    { "title": "Adaptive Feedback in VR Industrial Training Environments", "venue": "IEEE ROSE 2026", "note": "Conference paper / presentation" },
-    { "title": "Scenario-Driven VR Workforce Training with Finite-State Event Tracking", "venue": "IEEE ROSE 2026", "note": "Conference paper / presentation" },
-    { "title": "State-Aware Adaptive Feedback and Performance Telemetry in VR Industrial Maintenance Training", "venue": "MS Thesis, Marshall University", "note": "Thesis manuscript" }
+    {
+      "title": "State-Aware Adaptive Feedback and Performance Telemetry in Virtual Reality Industrial Maintenance Training",
+      "venue": "M.S. Thesis, Marshall University, 2026",
+      "note": "Thesis manuscript."
+    },
+    {
+      "title": "State-Aware Adaptive Feedback in Virtual Reality for Safety-Critical Infrastructure Training",
+      "venue": "IEEE Global Humanitarian Technology Conference, 2026",
+      "note": "Accepted publication."
+    },
+    {
+      "title": "A Scenario-Driven Virtual Reality Hydroelectric Training Environment with Fine-Grained Telemetry for Performance Evaluation",
+      "venue": "IEEE ROSE, 2025",
+      "note": "Accepted publication."
+    },
+    {
+      "title": "Assessing Procedural Content Generation in Reinforcement Learning Prompt-Based Feedback via Adaptive Virtual Reality Industrial Environments for Workforce Training",
+      "venue": "IEEE ROSE, 2025",
+      "note": "Accepted publication."
+    },
+    {
+      "title": "Modeling Community Resilience Under Prolonged Disruption: An Agent-Based Framework Integrating Social Connectivity, Migration, and Policy-Driven Allocation",
+      "venue": "Marshall University research award project, 2026",
+      "note": "Awarded Creative Discovery and Research Award."
+    },
+    {
+      "title": "An Analysis of Entropy and Randomness as it Relates to True Random Number Generation",
+      "venue": "NSA Future Computer Summer Internship Cohort, 2024",
+      "note": "Technical report."
+    },
+    {
+      "title": "Optimizing Machine Learning Models Using TVM",
+      "venue": "REU Research Symposium, University of Louisville, 2023",
+      "note": "Presented research symposium work."
+    }
+  ],
+  "teaching": [
+    {
+      "role": "Teaching Assistantship",
+      "org": "Colorado School of Mines",
+      "date": "Starting Aug 2026",
+      "text": "Supporting instruction and student guidance as part of Ph.D. funding."
+    },
+    {
+      "role": "Teaching Assistant",
+      "org": "Marshall University",
+      "date": "Aug\u2013Dec 2023",
+      "text": "Guided 40+ students in algorithmic design, grading, and course support."
+    },
+    {
+      "role": "Technical Mentorship",
+      "org": "Marshall University Technology Association",
+      "date": "2024\u2013Present",
+      "text": "Organizing student technical activities, workshops, and peer support."
+    }
+  ],
+  "service": [
+    {
+      "role": "President",
+      "org": "Marshall University Technology Association",
+      "date": "2024\u2013Present"
+    },
+    {
+      "role": "Member",
+      "org": "Engineering Student Advisory Council",
+      "date": "2024\u2013Present"
+    },
+    {
+      "role": "Student Member",
+      "org": "IEEE",
+      "date": "Current"
+    },
+    {
+      "role": "Alumni",
+      "org": "Appalachian Leadership and Education Foundation",
+      "date": "2021\u20132025"
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "Marshall University",
+      "detail": "M.S. Computer Science, B.S. Computer Science with Honors",
+      "image": "assets/marshall-campus.jpg",
+      "fallback": "Marshall"
+    },
+    {
+      "name": "Colorado School of Mines",
+      "detail": "Incoming Ph.D. Computer Science student, HCI focus",
+      "image": "assets/mines-campus.jpg",
+      "fallback": "Mines"
+    }
+  ],
+  "gallery": [
+    {
+      "title": "State-aware task hierarchy",
+      "caption": "Abstract state-machine representation used to organize task progression and feedback logic.",
+      "image": "assets/gallery/vr-state-machine.png"
+    },
+    {
+      "title": "Reservoir maintenance task",
+      "caption": "VR hydroelectric training task showing reservoir maintenance and debris-removal workflow.",
+      "image": "assets/gallery/reservoir-task.png"
+    },
+    {
+      "title": "Rotor maintenance task",
+      "caption": "VR industrial maintenance sequence focused on rotor repair, replacement, and alignment.",
+      "image": "assets/gallery/rotor-task.png"
+    },
+    {
+      "title": "Fan blade maintenance task",
+      "caption": "VR maintenance task focused on damaged fan components and procedural repair.",
+      "image": "assets/gallery/fan-task.png"
+    },
+    {
+      "title": "Primary effect-size summary",
+      "caption": "Participant-level effect-size summary for primary study outcomes.",
+      "image": "assets/gallery/effect-sizes.png"
+    },
+    {
+      "title": "Safety-focused evidence",
+      "caption": "Safety-focused analysis figure summarizing error and violation patterns.",
+      "image": "assets/gallery/safety-evidence.png"
+    }
   ]
 }

@@ -1,45 +1,12 @@
-const fallbackData = {
-  quickLinks: [
-    { label: 'Research', url: '#research' },
-    { label: 'Projects', url: '#projects' },
-    { label: 'Publications', url: '#publications' },
-    { label: 'CV', url: 'docs/Josh-Hatfield-CV.pdf' }
-  ],
-  news: [
-    { date: '2026', text: 'Preparing MS thesis defense on VR industrial maintenance training.' },
-    { date: '2026', text: 'Papers accepted for IEEE ROSE 2026.' },
-    { date: '2026', text: 'Incoming PhD student in Computer Science / HCI at Colorado School of Mines.' }
-  ],
-  research: [
-    { title: 'VR Industrial Training', meta: 'Thesis Research', text: 'Immersive maintenance tasks, performance telemetry, safety violations, hesitation events, and adaptive HUD feedback.' },
-    { title: 'Human-Centered AI', meta: 'HCI + AI', text: 'AI-assisted feedback generation, explanation, and state-aware support for learning environments.' },
-    { title: 'Narrative Reflection Systems', meta: 'Emerging Direction', text: 'D&D-inspired and spiritually informed reflection systems for meaning-making and care contexts.' }
-  ],
-  projects: [
-    { title: 'VR Hydroelectric Maintenance Trainer', meta: 'Unreal Engine / VR', text: 'A VR system for procedural industrial maintenance training with task-state tracking and feedback.', url: 'https://github.com/sirjoshies' },
-    { title: 'Source-of-Truth Analysis Pipeline', meta: 'Python / Statistics', text: 'Reusable analysis workflow for participant-level KPIs, event logs, survey scoring, and figures.', url: 'https://github.com/sirjoshies' },
-    { title: 'Community Resilience ABM', meta: 'Agent-Based Modeling', text: 'Simulation framework for prolonged disruption, social connectivity, migration, and policy allocation.', url: 'https://github.com/sirjoshies' }
-  ],
-  publications: [
-    { title: 'Adaptive Feedback in VR Industrial Training Environments', venue: 'IEEE ROSE 2026', note: 'Conference paper / presentation' },
-    { title: 'Scenario-Driven VR Workforce Training with Finite-State Event Tracking', venue: 'IEEE ROSE 2026', note: 'Conference paper / presentation' },
-    { title: 'State-Aware Adaptive Feedback and Performance Telemetry in VR Industrial Maintenance Training', venue: 'MS Thesis, Marshall University', note: 'Thesis manuscript' }
-  ]
-};
-
 async function loadData() {
-  try {
-    const response = await fetch('data/site.json');
-    if (!response.ok) throw new Error('No JSON data found');
-    return await response.json();
-  } catch (error) {
-    return fallbackData;
-  }
+  const response = await fetch('data/site.json');
+  if (!response.ok) throw new Error('Could not load site data');
+  return response.json();
 }
 
 function linkButton(item) {
   const a = document.createElement('a');
-  a.className = item.primary ? 'button primary' : 'button';
+  a.className = item.primary ? 'button primary' : 'button ghost';
   a.href = item.url;
   a.textContent = item.label;
   return a;
@@ -74,6 +41,44 @@ function renderPublications(items) {
   `).join('');
 }
 
+function renderTimeline(selector, items) {
+  const el = document.querySelector(selector);
+  el.innerHTML = items.map(item => `
+    <article class="timeline-item">
+      <div class="timeline-date">${item.date || ''}</div>
+      <div>
+        <h3>${item.role}</h3>
+        <p class="timeline-org">${item.org}</p>
+        ${item.text ? `<p>${item.text}</p>` : ''}
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderAffiliations(items) {
+  const el = document.querySelector('#affiliation-grid');
+  el.innerHTML = items.map(item => `
+    <article class="affiliation-card">
+      <img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+      <div class="campus-fallback">${item.fallback}</div>
+      <div>
+        <h3>${item.name}</h3>
+        <p>${item.detail}</p>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderGallery(items) {
+  const el = document.querySelector('#gallery-grid');
+  el.innerHTML = items.map(item => `
+    <figure>
+      <img src="${item.image}" alt="${item.title}" loading="lazy" />
+      <figcaption><strong>${item.title}</strong><span>${item.caption}</span></figcaption>
+    </figure>
+  `).join('');
+}
+
 function initNav() {
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#site-nav');
@@ -94,11 +99,17 @@ function initReveal() {
 
 loadData().then(data => {
   document.querySelector('#quick-links').append(...data.quickLinks.map(linkButton));
-  renderNews(data.news);
-  renderCards('#research-grid', data.research);
-  renderCards('#project-grid', data.projects);
-  renderPublications(data.publications);
+  renderNews(data.news || []);
+  renderCards('#research-grid', data.research || []);
+  renderCards('#project-grid', data.projects || []);
+  renderPublications(data.publications || []);
+  renderTimeline('#teaching-list', data.teaching || []);
+  renderTimeline('#service-list', data.service || []);
+  renderAffiliations(data.affiliations || []);
+  renderGallery(data.gallery || []);
   document.querySelector('#year').textContent = new Date().getFullYear();
   initNav();
   initReveal();
+}).catch(error => {
+  console.error(error);
 });

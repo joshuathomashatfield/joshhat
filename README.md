@@ -1,112 +1,70 @@
 # joshhat — Academic Portfolio Website
 
-A light, professional, GitHub Pages-ready academic portfolio for Josh Hatfield.
+A light-blue, GitHub Pages-ready academic portfolio for Joshua Hatfield.
 
-This repo is designed to work as a static GitHub Pages site with dynamic content loaded from `data/site.json`.
+## Main files to edit
 
-## Recommended repository name
+- `data/site.json` — news, research areas, projects, publications, teaching, service, affiliations, and gallery entries.
+- `assets/profile.jpg` — professional headshot used on the homepage.
+- `docs/Josh-Hatfield-CV.pdf` — downloadable CV.
+- `assets/gallery/` — thesis/project images used in the gallery.
 
-If you want the repository to be named `joshhat`, create a public GitHub repository named:
+## Updating the site online through GitHub
 
-```text
-joshhat
-```
+1. Open the repository on GitHub.
+2. Click the file you want to edit, usually `data/site.json`.
+3. Click the pencil icon.
+4. Make your change.
+5. Scroll down and click **Commit changes**.
+6. Wait 1–3 minutes for GitHub Pages to redeploy.
 
-Then enable GitHub Pages from:
+## Updating the CV
 
-```text
-Settings → Pages → Deploy from branch → main → /root
-```
-
-Your site will usually publish at:
-
-```text
-https://sirjoshies.github.io/joshhat/
-```
-
-If you want the site to live at the root URL instead:
-
-```text
-https://sirjoshies.github.io
-```
-
-then the repo must be named:
-
-```text
-sirjoshies.github.io
-```
-
-A custom domain can also point to either version later.
-
-## Editing your content
-
-Most portfolio content lives in:
-
-```text
-data/site.json
-```
-
-Edit this file to update:
-
-- quick buttons
-- news
-- research areas
-- project cards
-- publications
-
-## Adding your professional photo
-
-Upload a professional headshot here:
-
-```text
-assets/profile.jpg
-```
-
-Recommended format:
-
-- square image
-- JPG or PNG
-- at least 600 × 600 pixels
-- professional or academic-looking background
-
-The page will automatically use this photo. If no photo exists, it falls back to a clean `JH` placeholder.
-
-## Adding your CV
-
-Place your CV PDF here:
+Upload your newest CV to:
 
 ```text
 docs/Josh-Hatfield-CV.pdf
 ```
 
-The CV buttons already point to that file.
+Keep the filename the same so the website link never changes.
 
-## File structure
+## Updating the headshot
+
+Upload a square or near-square professional image to:
 
 ```text
-joshhat/
-├── index.html
-├── styles.css
-├── app.js
-├── data/
-│   └── site.json
-├── docs/
-│   └── PUT_CV_HERE.txt
-├── assets/
-│   └── PUT_PROFILE_PHOTO_HERE.txt
-├── README.md
-└── .gitignore
+assets/profile.jpg
 ```
 
-## Design notes
+The current image is already cropped for the homepage.
 
-The design uses:
+## Adding Marshall or Mines campus images
 
-- light academic color scheme
-- soft blue, green, and gold accents
-- dynamic hover buttons
-- animated section reveals
-- responsive mobile layout
-- simple JSON-driven content
+To add campus images, upload files named:
 
-No backend, database, or paid hosting is required.
+```text
+assets/marshall-campus.jpg
+assets/mines-campus.jpg
+```
+
+The site will automatically show those images in the Bio section. If they are missing, it displays clean text fallback cards instead.
+
+## Adding gallery images
+
+Add images to `assets/gallery/`, then edit the `gallery` list in `data/site.json`:
+
+```json
+{
+  "title": "Figure title",
+  "caption": "Brief description.",
+  "image": "assets/gallery/example.jpg"
+}
+```
+
+## GitHub Pages
+
+For this static site, use:
+
+```text
+Settings → Pages → Deploy from a branch → main → /root
+```
