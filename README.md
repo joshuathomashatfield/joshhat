@@ -1,3 +1,5 @@
+If you have stumbled here, note this is my personal website that I update and manage as my professioanl career develops! Feel free to use this structure to inform your own site :)
+
 # joshhat — Academic Portfolio Website
 
 A light-blue, GitHub Pages-ready academic portfolio for Joshua Hatfield.
