@@ -1,72 +1,24 @@
-If you have stumbled here, note this is my personal website that I update and manage as my professioanl career develops! Feel free to use this structure to inform your own site :)
+# Joshua Hatfield’s Academic Portfolio
 
-# joshhat — Academic Portfolio Website
+This repository contains Joshua Hatfield’s academic portfolio. It brings together his research in human–computer interaction, immersive systems, and human-centered AI, alongside his publications, teaching, projects, and CV.
 
-A light-blue, GitHub Pages-ready academic portfolio for Joshua Hatfield.
+[View the live portfolio](https://joshuathomashatfield.github.io/joshhat/)
 
-## Main files to edit
+## Make it your own
 
-- `data/site.json` — news, research areas, projects, publications, teaching, service, affiliations, and gallery entries.
-- `assets/profile.jpg` — professional headshot used on the homepage.
-- `docs/Josh-Hatfield-CV.pdf` — downloadable CV.
-- `assets/gallery/` — thesis/project images used in the gallery.
+Building an academic portfolio? Feel free to clone the repo and make it your own. The layout gives you room to highlight the work you care about, whether that’s a first research project, a growing publication list, or a gallery of work in progress. Swap in your own content, CV, and images, and keep the sections that fit your work.
 
-## Updating the site online through GitHub
+| File | What it contains |
+| --- | --- |
+| [`data/site.json`](data/site.json) | News, campus and experience photos, and gallery entries |
+| [`index.html`](index.html) and [`styles.css`](styles.css) | Page structure and visual style |
+| [`assets/`](assets/) | Portrait, campus photos, and research figures |
+| [`cv/Josh-Hatfield-CV.tex`](cv/Josh-Hatfield-CV.tex) | Editable LaTeX source for the CV |
 
-1. Open the repository on GitHub.
-2. Click the file you want to edit, usually `data/site.json`.
-3. Click the pencil icon.
-4. Make your change.
-5. Scroll down and click **Commit changes**.
-6. Wait 1–3 minutes for GitHub Pages to redeploy.
+## CV and publishing
 
-## Updating the CV
+The site uses plain HTML, CSS, and JavaScript. The workspace includes a LaTeX Workshop configuration for a side-by-side PDF preview in VS Code with `pdflatex` and TeX Gyre Termes.
 
-Upload your newest CV to:
+With GitHub Pages set to **GitHub Actions**, the [publishing workflow](.github/workflows/pages.yml) builds the CV and deploys it with the site on each push to `main`. The [PDF snapshot](docs/Josh-Hatfield-CV.pdf) is available directly from the repository.
 
-```text
-docs/Josh-Hatfield-CV.pdf
-```
-
-Keep the filename the same so the website link never changes.
-
-## Updating the headshot
-
-Upload a square or near-square professional image to:
-
-```text
-assets/profile.jpg
-```
-
-The current image is already cropped for the homepage.
-
-## Adding Marshall or Mines campus images
-
-To add campus images, upload files named:
-
-```text
-assets/marshall-campus.jpg
-assets/mines-campus.jpg
-```
-
-The site will automatically show those images in the Bio section. If they are missing, it displays clean text fallback cards instead.
-
-## Adding gallery images
-
-Add images to `assets/gallery/`, then edit the `gallery` list in `data/site.json`:
-
-```json
-{
-  "title": "Figure title",
-  "caption": "Brief description.",
-  "image": "assets/gallery/example.jpg"
-}
-```
-
-## GitHub Pages
-
-For this static site, use:
-
-```text
-Settings → Pages → Deploy from a branch → main → /root
-```
+Education, research interests, projects, publications, professional experience, teaching, and service come from the LaTeX source. The site also rotates through publications, projects, and awards from the CV. News and images are managed in `data/site.json`. A local HTTP preview reads the current LaTeX source on refresh. The publishing workflow generates the public data and PDF together.

@@ -1,0 +1,58 @@
+name: Build CV and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Install pdfLaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y texlive-latex-base texlive-latex-recommended tex-gyre
+
+      - name: Assemble site and compile CV
+        run: |
+          mkdir -p _site/docs
+          cp -R index.html app.js cv-data.mjs styles.css assets data _site/
+          node --input-type=module <<'JS'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          import { parseCV } from './cv-data.mjs';
+          const cv = parseCV(readFileSync('cv/Josh-Hatfield-CV.tex', 'utf8'));
+          writeFileSync('_site/data/cv.json', JSON.stringify(cv));
+          JS
+          pdflatex -halt-on-error -interaction=nonstopmode -output-directory="$RUNNER_TEMP" cv/Josh-Hatfield-CV.tex
+          test -s "$RUNNER_TEMP/Josh-Hatfield-CV.pdf"
+          cp "$RUNNER_TEMP/Josh-Hatfield-CV.pdf" _site/docs/
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

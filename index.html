@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Josh Hatfield | Academic Portfolio</title>
-  <meta name="description" content="Academic portfolio, CV, and research archive for Josh Hatfield: HCI, VR training, adaptive feedback, human-centered AI, and simulation systems." />
+  <meta name="description" content="Academic portfolio, curriculum vitae, and research archive for Josh Hatfield: HCI, VR training, adaptive feedback, human-centered AI, and simulation systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,10 +15,10 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Home">
-        <span class="brand-mark">JH</span>
-        <span class="brand-text">Josh Hatfield</span>
-      </a>
+      <div class="brand">
+        <button class="brand-mark" type="button" id="accent-switch" aria-label="Violet accent" aria-pressed="false" title="Switch accent color">JH</button>
+        <a class="brand-text" href="#home">Josh Hatfield</a>
+      </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
@@ -23,6 +26,7 @@
         <a href="#news">News</a>
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
         <a href="#teaching">Teaching</a>
         <a href="#service">Service</a>
@@ -31,60 +35,71 @@
     </div>
   </header>
 
-  <main id="main">
-    <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <aside class="profile-card reveal">
-          <div class="portrait-wrap">
-            <img class="portrait-img" src="assets/profile.jpg" alt="Professional portrait of Josh Hatfield" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-            <div class="portrait-placeholder" aria-label="Profile image placeholder">JH</div>
-          </div>
-          <h1>Joshua Hatfield</h1>
-          <p class="tagline">Ph.D. computer science researcher working at the intersection of HCI, VR training, adaptive feedback, and human-centered AI.</p>
-          <dl class="contact-list">
-            <div><dt>Status</dt><dd>Ph.D. Student</dd></div>
-            <div><dt>Academic Path</dt><dd>Marshall University → Colorado School of Mines</dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:joshuathomashatfield@gmail.com">joshuathomashatfield@gmail.com</a></dd></div>
-            <div><dt>GitHub</dt><dd><a href="https://github.com/sirjoshies">github.com/sirjoshies</a></dd></div>
-          </dl>
-          <div class="button-row">
-            <a class="button primary" href="docs/Josh-Hatfield-CV.pdf">Download CV</a>
-            <a class="button ghost" href="https://github.com/joshuathomashatfield">GitHub</a>
-          </div>
-        </aside>
+  <div class="binary-margins" aria-hidden="true">
+    <div class="binary-rail"><div class="binary-track"></div></div>
+    <div class="binary-rail"><div class="binary-track"></div></div>
+  </div>
 
-        <div class="hero-content reveal">
-          <p class="eyebrow">Academic Portfolio</p>
-          <h2>Designing adaptive simulation environments for training, safety, and decision-making.</h2>
-          <p>
-            I am interested in reinforcement learning, virtual reality, immersive analytics, and human-centered AI.
-            My current work examines how state-aware feedback and performance telemetry can support procedural learning in safety-critical industrial maintenance settings.
-          </p>
-          <div class="quick-links" id="quick-links"></div>
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"></div>
+      <button type="button" class="headset-trigger" aria-label="Send a pulse through the binary margins" title="Send a pulse through the binary margins">XR</button>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Computer Science Ph.D. Student</p>
+          <div class="hero-identity">
+            <img class="portrait-img" src="assets/profile.jpg" alt="Portrait of Joshua Hatfield" width="144" height="144" />
+            <h1 id="hero-title">Joshua Hatfield</h1>
+          </div>
+          <p class="hero-lead">Designing adaptive simulation environments for training, safety, and decision-making.</p>
+          <p class="hero-description">My research explores how state-aware feedback and performance telemetry can support procedural learning in safety-critical industrial maintenance.</p>
+          <div class="quick-links" id="quick-links">
+            <a class="button primary" href="docs/Josh-Hatfield-CV.pdf">Download Curriculum Vitae</a>
+            <a class="button ghost" href="#research">Explore research</a>
+          </div>
+        </div>
+        <div class="hero-profile">
+          <div class="profile-identity">
+            <strong>Colorado School of Mines</strong>
+            <span>M.S. Computer Science, Marshall University</span>
+          </div>
+          <div class="profile-links">
+            <a id="profile-email" href="mailto:joshuathomashatfield@gmail.com">Email</a>
+            <a id="profile-github" href="https://github.com/joshuathomashatfield">GitHub</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="bio" class="section">
-      <div class="container two-column reveal">
+    <section class="section highlights-section" id="cv-highlights" aria-labelledby="highlights-title" hidden>
+      <div class="container highlights">
         <div>
-          <p class="eyebrow">Bio</p>
-          <h2>Brief Bio</h2>
+          <h2 id="highlights-title">From the Curriculum Vitae</h2>
+          <div class="highlight-controls" aria-label="Highlight controls">
+            <button type="button" data-highlight="previous">Previous</button>
+            <button type="button" data-highlight="next">Next</button>
+            <button type="button" data-highlight="pause">Pause</button>
+          </div>
+        </div>
+        <div class="highlight-slides" aria-live="off"></div>
+      </div>
+    </section>
+
+    <section id="bio" class="section">
+      <div class="container two-column">
+        <div>
+          <h2>About</h2>
         </div>
         <div class="prose">
-          <p>
-            Joshua Hatfield is a Ph.D. student in Computer Science at the Colorado School of Mines specializing in human-computer interaction and human-centered artificial intelligence. He earned his M.S. in Computer Science from Marshall University, where his research included immersive training systems and adaptive feedback in virtual reality.          </p>
-          <p>
-            His research focuses on intelligent systems that understand, support, and adapt to human behavior, with particular interests in human-AI interaction, VR/XR, multimodal and egocentric sensing, uncertainty-aware AI, adaptive training, and AI-assisted decision support. His work has explored VR-based industrial maintenance training, behavioral telemetry and adaptive feedback, agent-based community resilience modeling, FPGA-based secure entropy generation, and machine-learning systems. His current research interests center on developing trustworthy AI systems that can interpret human activity, estimate uncertainty and user needs, and determine when and how to provide effective assistance.          </p>
+          <p id="cv-bio">Joshua Hatfield is a Ph.D. student in Computer Science at the Colorado School of Mines.</p>
           <div id="affiliation-grid" class="affiliation-grid"></div>
         </div>
       </div>
     </section>
 
     <section id="news" class="section alt">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">News</p>
           <h2>Updates &amp; Highlights</h2>
         </div>
         <div id="news-list" class="stacked-list"></div>
@@ -92,9 +107,8 @@
     </section>
 
     <section id="research" class="section">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Research</p>
           <h2>Research Directions</h2>
           <p>Current and emerging research areas spanning HCI, VR/XR simulation, adaptive systems, and data-driven training environments.</p>
         </div>
@@ -103,20 +117,27 @@
     </section>
 
     <section id="projects" class="section alt">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
           <h2>Selected Projects</h2>
-          <p>Selected research and software projects. Public repositories, papers, and demos can be linked as they become available.</p>
+          <p>Research prototypes and software spanning immersive training, embedded systems, and applied AI.</p>
         </div>
         <div id="project-grid" class="card-grid"></div>
       </div>
     </section>
 
-    <section id="publications" class="section">
-      <div class="container reveal">
+    <section id="experience" class="section">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Publications</p>
+          <h2>Research &amp; Professional Experience</h2>
+        </div>
+        <div id="experience-grid" class="experience-grid"></div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-heading">
           <h2>Papers, Posters &amp; Reports</h2>
         </div>
         <div id="publication-list" class="pub-list"></div>
@@ -124,9 +145,8 @@
     </section>
 
     <section id="teaching" class="section alt">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Teaching</p>
           <h2>Teaching &amp; Mentorship</h2>
         </div>
         <div id="teaching-list" class="timeline-list"></div>
@@ -134,9 +154,8 @@
     </section>
 
     <section id="service" class="section">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Service</p>
           <h2>Leadership &amp; Service</h2>
         </div>
         <div id="service-list" class="timeline-list compact"></div>
@@ -144,11 +163,10 @@
     </section>
 
     <section id="gallery" class="section alt">
-      <div class="container reveal">
+      <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Gallery</p>
           <h2>Images &amp; Media</h2>
-          <p>Selected thesis figures and visual artifacts from VR industrial maintenance training. Additional campus or lab images can be added to the assets folder.</p>
+          <p>Thesis figures and scenes from virtual reality industrial maintenance training.</p>
         </div>
         <div id="gallery-grid" class="gallery-grid"></div>
       </div>
@@ -157,7 +175,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Josh Hatfield. Built for GitHub Pages.</p>
+      <p>© <span id="year"></span> Joshua Hatfield.</p>
       <a href="#home">Back to top</a>
     </div>
   </footer>

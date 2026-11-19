@@ -1,0 +1,38 @@
+{
+  "[latex]": {
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1200
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.magic.args": [
+    "-halt-on-error",
+    "-interaction=nonstopmode",
+    "-file-line-error",
+    "-synctex=1",
+    "-output-directory=%OUTDIR%",
+    "%DOC_EXT%"
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.tab.editorGroup": "right",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdfLaTeX",
+      "tools": ["cv-pdflatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "cv-pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-halt-on-error",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-synctex=1",
+        "-output-directory=%OUTDIR%",
+        "%DOC_EXT%"
+      ]
+    }
+  ]
+}

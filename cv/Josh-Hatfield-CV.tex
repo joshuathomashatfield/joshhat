@@ -1,0 +1,180 @@
+% !TeX program = pdflatex
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{tgtermes}
+\usepackage[hmargin=1in,top=0.96in,bottom=1in]{geometry}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Joshua Hatfield -- Curriculum Vitae},pdfauthor={Joshua Hatfield}}
+\definecolor{wordlink}{HTML}{467886}
+\pagestyle{empty}
+\raggedbottom
+\setlength{\parindent}{0pt}
+
+% Tab stops are measured from the left text margin.
+\newcommand{\cvsection}[1]{%
+  \par{\fontsize{12bp}{13.9bp}\selectfont
+    \leavevmode\rlap{\rule[-1.05bp]{\linewidth}{0.45bp}}\textbf{#1}\par}%
+  \nopagebreak[4]%
+}
+\newcommand{\cvlink}[2]{\href{#1}{\textcolor{wordlink}{\underline{#2}}}}
+\newcommand{\cvrow}[4]{%
+  \par\begingroup
+    \leftskip=#1\relax
+    \makebox[\dimexpr#2-#1\relax][l]{#3}\mbox{#4}\par
+  \endgroup
+}
+\newcommand{\cvpublication}[3]{#1 #2 #3\par}
+\newcommand{\cvproject}[2]{\textit{#1}: #2\par}
+\newenvironment{cvindented}{\par\begingroup\leftskip=36bp}{\par\endgroup}
+\newenvironment{cvbullets}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{36bp}%
+    \setlength{\labelwidth}{18bp}%
+    \setlength{\labelsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\itemsep}{0.72bp}%
+    \renewcommand{\makelabel}[1]{##1\hfil}%
+  }%
+}{\end{list}}
+
+\begin{document}
+\fontsize{11bp}{12.72bp}\selectfont
+\raggedright
+\setlength{\parskip}{6bp}
+{\centering {\fontsize{12bp}{13.9bp}\selectfont \textbf{Joshua Hatfield}\par}
+  Golden, CO \textbullet{} joshuathomashatfield@gmail.com \textbullet{} (304) 601-5636\\
+  \cvlink{http://www.linkedin.com/in/joshua-hatfield-675474192}{LinkedIn} \textbullet{} \cvlink{https://github.com/joshuathomashatfield}{GitHub} \textbullet{} \cvlink{https://joshuathomashatfield.github.io/joshhat/}{Website}\par}
+
+\cvsection{Career Objective}
+Ph.D. student in Computer Science focused on HCI, immersive systems, and human-centered AI, with interests in performance research and teaching that improve how people learn, interact, and make decisions in complex environments.\par
+
+\cvsection{Research Interests}
+\cvrow{36bp}{324bp}{Procedural Content Generation \& Generative AI}{Embedded \& Secure Systems}
+\cvrow{36bp}{324bp}{Reinforcement Learning \& Human-Centered AI}{Digital Twins \& IoT Systems}
+\cvrow{36bp}{324bp}{Immersive Analytics \& XR Simulation}{Data Science}
+
+\cvsection{Education}
+\textit{\textbf{Colorado School of Mines,}} \textit{Golden, CO}\par
+\cvrow{36bp}{360bp}{Ph.D. in Computer Science}{\textit{Expected May 2030}}
+\vspace{-6bp}
+\textit{\textbf{Marshall University}}\textit{, Huntington, WV}\par
+\cvrow{36bp}{360bp}{(GPA: \textbf{4.0}) M.S. in Computer Science}{\textit{Aug 2026}}
+\cvrow{36bp}{360bp}{(GPA: \textbf{3.9}) B.S. in Computer Science with Honors}{\textit{May 2025}}
+\vspace{-6bp}
+\begin{cvindented}
+Minor: Mathematics
+\end{cvindented}
+
+\cvsection{Work Experience}
+\cvrow{0bp}{360bp}{\textbf{Teaching Assistantship -- Colorado School of Mines}}{\textit{Aug 2026 -- Present}}
+\begin{cvbullets}
+  \item \textit{Provide} guidance for students at Mines in Operating Systems and Networking
+\end{cvbullets}
+\cvrow{0bp}{360bp}{\textbf{IT/Data Analyst -- Best Virginia Heating and Cooling LLC}}{\textit{Jan 2026 -- Present}}
+\begin{cvbullets}
+  \item \textit{Managed} computer and software systems for 70+ employees.
+  \item \textit{Streamlined} data collection, extraction, and analysis to better inform field technicians.
+  \item \textit{Directed} price book for 8-figure company across different departments.
+\end{cvbullets}
+\cvrow{0bp}{360bp}{\textbf{(Graduate) Research Assistant -- Marshall University}}{\textit{Aug 2023 -- May 2026}}
+\begin{cvbullets}
+  \item \textit{Designed} VR-based training simulations integrating reinforcement-learning feedback loops to enhance user performance and retention.
+  \item \textit{Synthesized} technical documentation detailing system logic, architectural choices, testing conditions, and performance outcomes.
+  \item \textit{Awarded} the Creative Discovery and Research Award (2024 and 2026) for innovation in cross-disciplinary research pertaining to social cost-based migration in Covid-19 simulation and workforce training
+\end{cvbullets}
+\cvrow{0bp}{360bp}{\textbf{Future Computer Summer Intern -- National Security Agency (NSA)}}{\textit{Jun -- Aug 2024}}
+\begin{cvbullets}
+  \item \textit{Engineered} an FPGA-based True Random Number Generator achieving 99\%+ NIST-verified randomness for secure cryptographic applications.
+  \item \textit{Authored} comprehensive validation reports and presented outcomes to agency technical cohort.
+  \item \textit{Contributed} to the design of reproducible embedded-security frameworks and entropy verification systems.
+\end{cvbullets}
+% Preserve the page breaks in the Word CV.
+\newpage
+\cvrow{0bp}{360bp}{\textbf{Research Experience for Undergraduates (REU)-- University of Louisville}}{\textit{Jun -- Aug 2023}}
+\begin{cvbullets}
+  \item \textit{Optimized} Tensor Virtual Machine (TVM) inferences across variable CPU frequencies for heterogeneous computing environments.
+  \item \textit{Conducted} benchmark and performance analysis to improve deployment efficiency of ML models on constrained devices.
+  \item \textit{Delivered} findings during the REU Research Symposium, receiving commendation for clarity and rigor.
+\end{cvbullets}
+
+\cvsection{Teaching \& Mentorship}
+\cvrow{0bp}{360bp}{\textbf{Teaching Assistant -- Marshall University}}{\textit{Aug -- Dec 2023}}
+\begin{cvbullets}
+  \item \textit{Guided} 40+ students in algorithmic design, graded assignments, and supported course delivery in Data Structures and Algorithms.
+\end{cvbullets}
+
+\cvsection{Publications \& Presentations}
+\begin{cvindented}
+\cvpublication{Hatfield, J., Wahjudi P., Narman H., Chowdhury S., Alzarrad A. (2026)}{{\fontsize{12bp}{13.9bp}\selectfont\textit{State-Aware Adaptive Feedback and Performance Telemetry in Virtual Reality Industrial Maintenance Training}}\textit{.}}{Thesis at Marshall University for M.S. in Computer Science}
+
+\cvpublication{Hatfield J., Narman H., Chowhury S., Alzarrad A. (2026)}{\textit{State-Aware Adaptive Feedback in Virtual Reality for Safety-Critical Infrastructure Training.}}{Publication accepted at Global Humanitarian Technology Conference (GHTC).}
+
+\cvpublication{Hatfield J., Narman H., Chowhury S., Alzarrad A. (2025)}{\textit{A Scenario-Driven Virtual Reality Hydroelectric Training Environment with Fine-Grained Telemetry for Performance Evaluation.}}{Publication accepted at ROSE IEEE}
+
+\cvpublication{Hatfield J., Narman H., Chowhury S., Alzarrad A. (2025)}{\textit{Assessing Procedural Content Generation in Reinforcement Learning Prompt-Based Feedback via Adaptive Virtual Reality Industrial Environments for Workforce Training.}}{Publication accepted at ROSE IEEE}
+
+\cvpublication{Hatfield J., Chowdhury S., Ammar Alzarrad (2026)}{\textit{Modeling Community Resilience Under Prolonged Disruption: An Agent-Based Framework Integrating Social Connectivity, Migration, and Policy-Driven Allocation.}}{Work which was awarded the Creative Discovery and Research Award in 2024 and published to MDPI: Analytics in 2026.}
+\par\vspace{-6bp}
+\cvpublication{Hatfield J., Serdyuk K., Strots B., Baker N., Simon T., Gauthier D., Lui W. (2024)}{\textit{An Analysis of Entropy and Randomness as it Relates to True Random Number Generation.}}{Technical Report presented to NSA Future Computer Summer Internship Cohort.}
+
+\cvpublication{Hatfield, J., Baidya S., Kutukcu B. (2023).}{\textit{Optimizing Machine Learning Models Using TVM.}}{Presented at REU Research Symposium, University of Louisville.}
+\end{cvindented}
+
+\cvsection{Selected Projects}
+\begin{cvindented}
+\cvproject{AI-Driven VR Simulation Framework}{Designed a reinforcement-learning feedback system in Unreal Engine 5 to train users in hydroelectric maintenance.}
+
+\cvproject{FPGA-Based TRNG}{Implemented and validated a hardware entropy generator for cryptographic systems using NIST SP 800-22 standards.}
+
+\cvproject{GameShelf Web Platform}{Developed a cloud-based game catalog using Azure SQL, Node.js, and React, supporting user reviews and social connectivity.}
+
+\cvproject{Facial Recognition Attendance System}{Built real-time recognition and logging across multi-camera networks with OpenCV and Python.}
+\end{cvindented}
+
+\newpage
+\cvsection{Scholarships}
+{\fontsize{12bp}{13.9bp}\selectfont
+\cvrow{36bp}{396bp}{Logan County Charitable and Educational Foundation Grant}{2025}
+\cvrow{36bp}{396bp}{Dorsey Lee Spaulding Family Scholarship}{2021}
+\cvrow{36bp}{396bp}{John Laidley Scholarship}{2021}
+\cvrow{36bp}{396bp}{Promise Scholarship}{2021}
+\cvrow{36bp}{396bp}{Honors College Scholarship}{2021}
+\cvrow{36bp}{396bp}{Federal Pell Grant}{2021}
+\cvrow{36bp}{396bp}{West Virginia Higher Education Grant}{2021}
+\cvrow{36bp}{396bp}{United States Senate Youth Program Scholarship}{2020}
+}
+
+\cvsection{Honors \& Awards}
+\cvrow{36bp}{396bp}{Creative Discovery and Research Award, Marshall University}{2026}
+\cvrow{36bp}{396bp}{Summa Cum Laude}{2025}
+\cvrow{36bp}{396bp}{ASEE North Central Student Service Award}{2025}
+\cvrow{36bp}{396bp}{National Cyber League: Top 500}{2025}
+\cvrow{36bp}{396bp}{ALEF Scholar, Appalachian Leadership and Education Foundation}{2021-2025}
+\cvrow{36bp}{396bp}{Creative Discovery and Research Award, Marshall University}{2024}
+\cvrow{36bp}{396bp}{U.S. Senate Youth Delegate}{2020}
+
+\cvsection{Leadership \& Service}
+\cvrow{36bp}{396bp}{President, Marshall University Technology Association}{2024--2025}
+\cvrow{36bp}{396bp}{Member, Engineering Student Advisory Council}{2024-2025}
+
+\cvsection{Technical Skills}
+\begin{cvindented}
+Programming: Python, C++, C, Java, C\#, SQL, Verilog, JavaScript, Go, Lua\\
+Frameworks \& Tools: Unreal Engine, TVM, React, Node.js, Azure, Git, Linux, FPGA Design, Service Titan, Contractor Commerce, ServiceLite, Rustdesk, Github Pages
+\end{cvindented}
+
+\cvsection{Professional Affiliations}
+\begin{cvbullets}
+  \item Institute of Electrical and Electronics Engineers (IEEE), Student Member
+  \item Marshall University Technology Association, President
+  \item Appalachian Education Leadership Foundation, Alumni
+\end{cvbullets}
+
+\cvsection{Hyperlinks}
+LinkedIn: \cvlink{https://www.linkedin.com/in/joshua-hatfield-675474192/}{https://www.linkedin.com/in/joshua-hatfield-675474192/}\par
+GitHub: \cvlink{https://github.com/joshuathomashatfield}{https://github.com/joshuathomashatfield}\par
+\textbf{References:} Available upon request\par
+\end{document}

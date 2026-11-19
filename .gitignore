@@ -2,3 +2,10 @@
 Thumbs.db
 node_modules/
 .env
+/_site/
+/cv/*.aux
+/cv/*.fls
+/cv/*.log
+/cv/*.out
+/cv/*.pdf
+/cv/*.synctex.gz
